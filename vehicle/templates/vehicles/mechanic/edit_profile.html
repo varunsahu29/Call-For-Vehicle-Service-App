@@ -1,0 +1,41 @@
+{% extends 'vehicles/customer/base.html' %}
+{% load widget_tweaks %}
+{%block body%}
+<div class="container">
+    <div class="row">
+        <div class="col s6 offset-s3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content black-text">
+                        <form class="box" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                                <h1>MECHANIC EDIT</h1>
+                                <p class="text-muted"> Please enter details to edit account !</p>
+                                <label for="first_name">First Name</label>
+                                {% render_field userForm.first_name class="validate input-field" placeholder="First Name" %}
+                                <label for="last_name">Last Name</label>
+                                {% render_field userForm.last_name class="validate input-field" placeholder="Last Name" %}
+                                  <label for="mobile">Mobile</label>
+                                  {% render_field mechanicForm.mobile class="validate input-field" placeholder="Mobile" value=mechanic.mobile %}
+                                    <label for="address">Address</label>
+                                  {% render_field mechanicForm.address class="validate input-field" placeholder="Address" value=mechanic.address%}
+                                  <label for="skill">Skills</label>
+                                  {% render_field mechanicForm.skills class="validate input-field" placeholder="Skills" value=mechanic.skills %}
+                                <label for="username">Username</label>
+                                {% render_field userForm.username class="validate input-field" placeholder="Username" %}
+                                  <label for="password">Password</label>
+                                {% render_field userForm.password class="validate input-field" placeholder="Password" %} <br><br>
+                                <label for="profile_pic">Profile Picture</label>
+                                  {% render_field mechanicForm.profile_pic class="validate input-field" placeholder="Profile Picture" %}
+                                <div class="card-action">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Confirm
+                                        <i class="material-icons right">send</i>
+                                </button>
+                            </form>
+                     </div>
+                
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+{%endblock%} 

@@ -1,0 +1,36 @@
+{% extends 'vehicles/base.html' %}
+{% load widget_tweaks %}
+{%block body%}
+    <div class="container">
+        <div class="row">
+            <div class="col s6 offset-s3 center">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content black-text">
+                            <form class="box" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                  <h1>Mechanic SIGNUP</h1>
+                                  <p class="text-muted"> Please enter your details to create account !</p>                               
+                                                {% render_field userForm.first_name class="validate input-field" placeholder="First Name" %}
+                                                {% render_field userForm.last_name class="validate input-field" placeholder="Last Name" %}
+                                                {% render_field mechanicForm.address class="validate input-field" placeholder="Address" %}
+                                                  {% render_field mechanicForm.mobile class="validate input-field" placeholder="Mobile" %}
+                                                  {% render_field mechanicForm.skills class="validate input-field" placeholder="Skills" %}
+                                                  {% render_field userForm.username class="validate input-field" placeholder="Username" %}
+                                                    {% render_field userForm.password class="validate input-field" placeholder="Password" %}
+                        
+                                                          {% render_field mechanicForm.profile_pic class="validate input-field" placeholder="Profile pic" %}
+                                            </div>
+                                            <div class="card-action">
+                                                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                                    <i class="material-icons right">send</i>
+                                                </button>
+                                </form>
+                        </div>
+                      </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{%endblock%}

@@ -1,0 +1,39 @@
+{%extends 'vehicles/base.html'%}
+{%block body%}
+{% load static %}
+<div class="row">
+    <div class="col offset-s3 s3">
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{% static 'admin.png' %}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Customers<i class="material-icons right">more_vert</i></span>
+                <p><a href="/customerclick">View</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Customeres<i class="material-icons right">close</i></span>
+                <p>Customers Can Login Here.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col  s3">
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{% static 'mechanic.png'%}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Mechanic<i class="material-icons right">more_vert</i></span>
+                <p><a href="/mechanicclick">View</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Mechanic Can Login Here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
+            

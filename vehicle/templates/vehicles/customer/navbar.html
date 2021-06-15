@@ -1,0 +1,29 @@
+<nav>
+    <div class="nav-wrapper grey darken-1">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="{% url 'customer-dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'customer-request'%}">Request</a></li>
+            <li><a href="{% url 'customer-approved-request-invoice'%}">Invoice</a></li>
+            <li><a href="{% url 'customer-feedback'%}">FeedBack</a></li>
+            <li><a href="{% url 'aboutus' %}">About Us</a></li>
+            <li><a href="{% url 'contactus'%}">Contact Us</a></li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+            <li>
+                <nav class="orange">
+                    <div class="nav-wrapper col-s6">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                </div>
+            </nav>
+        </li>
+        <li><a href="{% url 'customer-profile'%}">Profile</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+</div>
+</nav>

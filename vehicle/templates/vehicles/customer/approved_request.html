@@ -1,0 +1,32 @@
+{% extends 'vehicles/customer/base.html' %}
+{%block body%}
+<div class="container">
+    <h1 class="center">All Requests</h1>
+    <table class="striped centered responsive-table yellow lighten-1">
+        <thead class="yellow darken-1">
+            <tr>
+                <th>Vehicle Name</th>
+                <th>Category</th>
+                <th>Vehicle Number</th>
+                <th>Problem Description</th>
+                <th>Enquiry Date</th>
+                <th>Status</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+            {% for enq in enquiries %}
+            <tr>
+              <td>{{enq.vehicle_name}}</td>
+              <td>{{enq.category}}</td>
+              <td>{{enq.vehicle_no}}</td>
+              <td>{{enq.problem_description}}</td>
+              <td>{{enq.date}}</td>
+              <td>{{enq.status}}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+    {%endblock%} 
+    

@@ -1,0 +1,28 @@
+{% extends 'vehicles/customer/base.html' %}
+{% load static %}
+{%block styles%}
+    .card{
+        width:400px;
+    }
+{%endblock%}
+{%block body%} 
+<div class="row">
+    <div class="col m7 offset-m4">
+      <div class="card blue">
+        <div class="card-image">
+          <img src="{% static customer.profile_pic.url%}"   >
+          <span class="card-title">{{customer}}</span>
+        </div>
+        <div class="card-content">
+          <h4>Customer Informations:</h4>
+          <h5>Name : {{customer}}</h3>
+          <h5>Mobile : {{customer.mobile}}</h3>
+          <h5>Address : {{customer.address}}</h3>
+        </div>
+        <div class="card-action yellow">
+          <a href="/edit-customer-profile">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%} 

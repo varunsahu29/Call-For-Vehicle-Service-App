@@ -1,0 +1,45 @@
+{% extends 'vehicles/customer/base.html' %}
+{%block body%}
+<div class="row">
+    <div class="col s3 ">
+      <div class="card green lighten-1">
+        <div class="card-content white-text">
+            <a href="/customer-view-request">
+          <span class="card-title"> View Pending Request</span>
+            <i class="large material-icons ">visibility</i>
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="col s3 ">
+        <div class="card purple lighten-1">
+          <div class="card-content white-text">
+              <a href="customer-add-request">
+            <span class="card-title">Make Request</span>
+                <i class="large material-icons ">add_circle</i>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 ">
+        <div class="card orange  lighten-1">
+          <div class="card-content white-text">
+              <a href="customer-approved-request">
+            <span class="card-title"> Approved Request</span>
+                <i class="large material-icons ">done</i>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 ">
+        <div class="card red lighten-1">
+          <div class="card-content white-text">
+              <a href="customer-approved-request-invoice">
+            <span class="card-title"> Bill </span>
+                <i class="large material-icons ">₹</i>
+              </a>
+          </div>
+        </div>
+      </div>
+</div>
+{%endblock%} 

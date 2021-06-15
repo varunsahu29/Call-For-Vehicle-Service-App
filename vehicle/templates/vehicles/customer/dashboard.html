@@ -1,0 +1,38 @@
+{% extends 'vehicles/customer/base.html' %}
+{%block body%}
+<div class="row">
+    <div class="col s3 ">
+      <div class="card blue darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"> New Request Made</span>
+          <h3>{{new_request_made}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col s3 ">
+        <div class="card yellow darken-3">
+          <div class="card-content white-text">
+            <span class="card-title">Vehicle Repair In Progress</span>
+            <h3>{{work_in_progress}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 ">
+        <div class="card green darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"> Vehicle Repaired</span>
+            <h3>{{work_completed}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 ">
+        <div class="card red darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Total Bill</span>
+            <h3>{{bill}}</h3>
+          </div>
+        </div>
+      </div>
+
+</div>
+{%endblock%} 

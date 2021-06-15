@@ -1,0 +1,29 @@
+{% extends 'vehicles/mechanic/base.html' %}
+{% load static %}
+{%block styles%}
+    .card{
+        width:400px;
+    }
+{%endblock%}
+{%block body%} 
+<div class="row">
+    <div class="col m7 offset-m4">
+      <div class="card blue">
+        <div class="card-image">
+          <img src="{% static mechanic.profile_pic.url%}"   >
+          <span class="card-title">{{mechanic}}</span>
+        </div>
+        <div class="card-content">
+          <h4>mechanic Informations:</h4>
+          <h5>Name : {{mechanic}}</h5>
+          <h5>Mobile : {{mechanic.mobile}}</h5>
+          <h5>Skill:{{mechanic.skills}}</h5>
+          <h5>Address : {{mechanic.address}}</h5>
+        </div>
+        <div class="card-action yellow">
+          <a href="/edit-mechanic-profile">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%} 
